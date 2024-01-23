@@ -38,7 +38,7 @@ nav ul{
     justify-content: center;
     align-items: center;
     font-size: 5vw;
-    cursor: crosshair;
+    cursor: pointer;
 }
 .box:hover{
     background-color: #d5a6db;
@@ -60,11 +60,42 @@ nav ul{
 
 .gameInfo{
     padding: 0px 50px;
-    background-color: yellow;
+    /* background-color: yellow; */
     font-family: 'Rubik', sans-serif;
     letter-spacing: 1.2px;
 }
-.img img{
-    display: none;
+.imgbox img{
+    width: 0;
+    transition: width 1s  ease-in-out;
 }
 
+
+#reset{
+    margin: 0 23px;
+    padding: 1px 18px;
+    background: #610f6c;
+    color: white;
+    outline-offset: 2px;
+    outline: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;    
+    font-size: 15px;
+    font-weight: bolder;
+
+}
+
+@media screen and (max-width: 1000px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3,15vw);
+    }
+}
